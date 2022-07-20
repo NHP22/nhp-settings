@@ -24,11 +24,3 @@ integrations:
     read-timeout: 1000
     write-timeout: 1000
     response-timeout: 1000
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    service-url:
-      defaultZone: ${EUREKA_URI:http://eureka:8761/eureka/}
-    registerWithEureka: true
-    fetchRegistry: true
