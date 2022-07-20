@@ -1,0 +1,36 @@
+server:
+  port: 8000
+  servlet:
+    context-path: /web-market-core
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5430/beta
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  application:
+    name: core-service
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.hibernate: INFO
+integrations:
+  cart-service:
+    url: lb://gateway:5555/cart  #  имя контейнера в eureka
+    connect-timeout: 1000
+    read-timeout: 1000
+    write-timeout: 1000
+    response-timeout: 1000
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URI:http://eureka:8761/eureka/}
+    registerWithEureka: true
+    fetchRegistry: true
