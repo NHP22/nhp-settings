@@ -5,7 +5,7 @@ eureka:
     lease-expiration-duration-in-seconds: 10 # таймер "down" после последнего сигнала
   client:
     service-url:
-      defaultZone: ${EUREKA_URI:http://eureka:8761/eureka/}
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka/}
     registerWithEureka: true
     fetchRegistry: true
     health-check:
