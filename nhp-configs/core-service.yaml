@@ -6,7 +6,7 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     username: postgres
-    password: {cipher}AQBvChmjEd0JA92ubY6nVHhbR1ABP80AcO7xy2XvnZf0SI0z5jQWVCJq8ovy+WCUtjBGRTXDd2aVi3wBsvNJtBVJ4gcqNYsXGYsWxk/Eru+6gb8clnzhC+TfbwT2yCmT0grqJZiakbhMpnmdQLJWVUkeKUHrV7ef7uWqWQnO9dKwwhL+73VESWgkjBA7HVgoz4UHyzaBeoUI2UB8PqtkGB6/A9OZdAEUrzJtGcQdMEDeKbiUQW+IVxwl5hf7v3wC+DSCb3q9BpCfgnw+QNJb3lC7ezFhxfNWWaKCtBF02+pzie/t5W+SIwcR5hfBa0PhQAxogtsRiWv3XJk1VvZXgDJ53QUfFxce6q+n5w282XSYTqr6Oaz+p2K4zwQyz4kejd0=
+    password: '{cipher}AQBvChmjEd0JA92ubY6nVHhbR1ABP80AcO7xy2XvnZf0SI0z5jQWVCJq8ovy+WCUtjBGRTXDd2aVi3wBsvNJtBVJ4gcqNYsXGYsWxk/Eru+6gb8clnzhC+TfbwT2yCmT0grqJZiakbhMpnmdQLJWVUkeKUHrV7ef7uWqWQnO9dKwwhL+73VESWgkjBA7HVgoz4UHyzaBeoUI2UB8PqtkGB6/A9OZdAEUrzJtGcQdMEDeKbiUQW+IVxwl5hf7v3wC+DSCb3q9BpCfgnw+QNJb3lC7ezFhxfNWWaKCtBF02+pzie/t5W+SIwcR5hfBa0PhQAxogtsRiWv3XJk1VvZXgDJ53QUfFxce6q+n5w282XSYTqr6Oaz+p2K4zwQyz4kejd0='
     url: jdbc:postgresql://localhost:5430/beta
   jpa:
     properties:
