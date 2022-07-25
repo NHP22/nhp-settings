@@ -6,7 +6,7 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     username: postgres
-    password: postgres
+    password: {cipher}AQBJnV9cWPpAdeH3M+St6bjQ2PmTLXAl/6I1nL1PWuWtHZoADegzfVCa6+wTZAN4pK/qRSibVnNafw4YD8W0iz1srdefMte7VUDJDg1XMWux+DDy5zw+sYmAScZSlWB/uLqqyvKg4jz3NtkJ6fU+82z5VVx7T7cfKDmX+Wfp0fvXfXnzhAIfX5vq8qAJMukTm1sGgZbq0a2CuzuCHtcRW8HU3ukFAnkLQHV6DC/eR1FlGXP1XcVsRiMdSYckpH1r9ZUpx/pTPv2OPuHHpASuTWJNwFD2mMCeoznijEVSsVGBfm/uD7DzPdROoK6qbLuc7XNR2QpK9ITJm47OeFRvp105S6CbMkD9W0lkqUQNoeZudj4IHfpRITn/foPBlYbdKNg=
     url: jdbc:postgresql://localhost:5430/beta
   jpa:
     properties:
