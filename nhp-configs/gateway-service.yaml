@@ -2,3 +2,48 @@ server:
   port: 5555
 jwt:
   secret: aevsggrixfnfgkrgnjfshgeilgskdfnvsjbvlkghri
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins:
+              - "http://localhost:3000"
+            allowedMethods:
+              - GET
+              - POST
+            allowedHeaders: "*"
+      routes:
+        - id: core-service
+          uri: lb://core-service/   # имя приложения в eureka
+          predicates:
+            - Path=/core/**
+          filters:
+            - StripPrefix=1
+            - PrefixPath=/web-market-core
+            - JwtAuthFilter
+        - id: cart-service
+          uri: lb://cart-service/    # имя приложения в eureka
+          predicates:
+            - Path=/cart/**
+          filters:
+            - StripPrefix=1
+            - PrefixPath=/web-market-cart
+            - JwtAuthFilter
+        - id: user-service
+          uri: lb://user-service/    # имя приложения в eureka
+          predicates:
+            - Path=/user/**
+          filters:
+            - StripPrefix=1
+            - PrefixPath=/web-market-user
+            - JwtAuthFilter
+        - id: analytics-service
+          uri: lb://analytics-service/    # имя приложения в eureka
+          predicates:
+            - Path=/analytics/**
+          filters:
+            - StripPrefix=1
+            - PrefixPath=/web-market-analytics
+            - JwtAuthFilter
